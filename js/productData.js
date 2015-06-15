@@ -4,6 +4,7 @@ module.exports = {
     localStorage.clear();
     localStorage.setItem('product', JSON.stringify([
       {
+        id: 001,
         name: 'Almond Toe Court Shoes, Patent Black',
         category: 'Women\'s Footwear'
         image: '',
@@ -11,6 +12,7 @@ module.exports = {
         stock: 5
       },
       {
+        id: 002,
         name: 'Suede Shoes, Blue',
         category: 'Women\'s Footwear'
         image: '',
@@ -18,6 +20,7 @@ module.exports = {
         stock: 4
       },
       {
+        id: 003,
         name: 'Leather Driver Saddle Loafers, Tan',
         category: 'Men\'s Footwear'
         image: '',
@@ -25,6 +28,7 @@ module.exports = {
         stock: 12
       },
       {
+        id: 004,
         name: 'Flip Flops, Red',
         category: 'Men\'s Footwear'
         image: '',
@@ -32,6 +36,7 @@ module.exports = {
         stock: 6
       },
       {
+        id: 005,
         name: 'Flip Flops, Blue',
         category: 'Men\'s Footwear'
         image: '',
@@ -39,6 +44,7 @@ module.exports = {
         stock: 0
       },
       {
+        id: 006,
         name: 'Gold Button Cardigan, Black',
         category: 'Women\'s Casualwear'
         image: '',
@@ -46,6 +52,7 @@ module.exports = {
         stock: 6
       },
       {
+        id: 007,
         name: 'Cotton Shorts, Medium Red',
         category: 'Women\'s Casualwear'
         image: '',
@@ -53,6 +60,7 @@ module.exports = {
         stock: 5
       },
       {
+        id: 008,
         name: 'Fine Stripe Short Sleeve ￼Shirt, Grey',
         category: 'Men\'s Casualwear'
         image: '',
@@ -60,6 +68,7 @@ module.exports = {
         stock: 9
       },
       {
+        id: 009,
         name: 'Fine Stripe Short Sleeve Shirt, Green',
         category: 'Men\'s Casualwear'
         image: '',
@@ -67,6 +76,7 @@ module.exports = {
         stock: 3
       },
       {
+        id: 010,
         name: 'Sharkskin Waistcoat, Charcoal',
         category: 'Men\'s Formalwear'
         image: '',
@@ -74,6 +84,7 @@ module.exports = {
         stock: 2
       },
       {
+        id: 011,
         name: 'Lightweight Patch Pocket Blazer, Deer',
         category: 'Men\'s Formalwear'
         image: '',
@@ -81,6 +92,7 @@ module.exports = {
         stock: 1
       },
       {
+        id: 012,
         name: 'Bird Print Dress, Black',
         category: 'Women\'s Formalwear'
         image: '',
@@ -88,6 +100,7 @@ module.exports = {
         stock: 10
       },
       {
+        id: 013,
         name: 'Mid Twist Cut-Out Dress, Pink',
         category: 'Women\'s Formalwear'
         image: '',
