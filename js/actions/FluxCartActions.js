@@ -3,7 +3,7 @@ var FluxCartConstants = require('../constants/FluxCartConstants');
 
 var FluxCartActions = {
 
-  receiveProduct: function(data){
+  receiveProduct: function(data) {
     AppDispatcher.handleAction({
       actionType: FluxCartConstants.RECEIVE_DATA,
       data: data
@@ -38,5 +38,6 @@ var FluxCartActions = {
       cartVisible: cartVisible
     })
   }
-
 };
+
+module.exports = FluxCartActions;

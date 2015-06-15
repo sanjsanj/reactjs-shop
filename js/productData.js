@@ -6,7 +6,7 @@ module.exports = {
       {
         id: 001,
         name: 'Almond Toe Court Shoes, Patent Black',
-        category: 'Women\'s Footwear'
+        category: 'Women\'s Footwear',
         image: '',
         price: 99.00,
         stock: 5
@@ -14,7 +14,7 @@ module.exports = {
       {
         id: 002,
         name: 'Suede Shoes, Blue',
-        category: 'Women\'s Footwear'
+        category: 'Women\'s Footwear',
         image: '',
         price: 42.00,
         stock: 4
@@ -22,7 +22,7 @@ module.exports = {
       {
         id: 003,
         name: 'Leather Driver Saddle Loafers, Tan',
-        category: 'Men\'s Footwear'
+        category: 'Men\'s Footwear',
         image: '',
         price: 34.00,
         stock: 12
@@ -30,7 +30,7 @@ module.exports = {
       {
         id: 004,
         name: 'Flip Flops, Red',
-        category: 'Men\'s Footwear'
+        category: 'Men\'s Footwear',
         image: '',
         price: 19.00,
         stock: 6
@@ -38,7 +38,7 @@ module.exports = {
       {
         id: 005,
         name: 'Flip Flops, Blue',
-        category: 'Men\'s Footwear'
+        category: 'Men\'s Footwear',
         image: '',
         price: 19.00,
         stock: 0
@@ -46,7 +46,7 @@ module.exports = {
       {
         id: 006,
         name: 'Gold Button Cardigan, Black',
-        category: 'Women\'s Casualwear'
+        category: 'Women\'s Casualwear',
         image: '',
         price: 167.00,
         stock: 6
@@ -54,23 +54,23 @@ module.exports = {
       {
         id: 007,
         name: 'Cotton Shorts, Medium Red',
-        category: 'Women\'s Casualwear'
+        category: 'Women\'s Casualwear',
         image: '',
         price: 30.00,
         stock: 5
       },
       {
-        id: 008,
+        id: 000,
         name: 'Fine Stripe Short Sleeve ￼Shirt, Grey',
-        category: 'Men\'s Casualwear'
+        category: 'Men\'s Casualwear',
         image: '',
         price: 49.99,
         stock: 9
       },
       {
-        id: 009,
+        id: 014,
         name: 'Fine Stripe Short Sleeve Shirt, Green',
-        category: 'Men\'s Casualwear'
+        category: 'Men\'s Casualwear',
         image: '',
         price: 39.99,
         stock: 3
@@ -78,7 +78,7 @@ module.exports = {
       {
         id: 010,
         name: 'Sharkskin Waistcoat, Charcoal',
-        category: 'Men\'s Formalwear'
+        category: 'Men\'s Formalwear',
         image: '',
         price: 75.00,
         stock: 2
@@ -86,7 +86,7 @@ module.exports = {
       {
         id: 011,
         name: 'Lightweight Patch Pocket Blazer, Deer',
-        category: 'Men\'s Formalwear'
+        category: 'Men\'s Formalwear',
         image: '',
         price: 175.00,
         stock: 1
@@ -94,7 +94,7 @@ module.exports = {
       {
         id: 012,
         name: 'Bird Print Dress, Black',
-        category: 'Women\'s Formalwear'
+        category: 'Women\'s Formalwear',
         image: '',
         price: 270.00,
         stock: 10
@@ -102,7 +102,7 @@ module.exports = {
       {
         id: 013,
         name: 'Mid Twist Cut-Out Dress, Pink',
-        category: 'Women\'s Formalwear'
+        category: 'Women\'s Formalwear',
         image: '',
         price: 540.00,
         stock: 5

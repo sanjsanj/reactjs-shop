@@ -2,7 +2,7 @@
   "name": "reactjs-shop",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "js/app.js",
   "dependencies": {
     "flux": "^2.0.0",
     "react": "^0.12.0",
