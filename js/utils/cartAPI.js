@@ -5,5 +5,4 @@ module.exports = {
     var data = JSON.parse(localStorage.getItem('product'));
     FluxCartActions.receiveProduct(data);
   }
-
 };

@@ -6,11 +6,9 @@ var _ = require('underscore');
 var _product = [], _selected = null;
 
 function loadProductData(data) {
-  // console.log(data.length);
   _product = data;
-  // console.log(_product);
-  // Array.prototype.push.apply(_product, data);
   _selected = data[0];
+  // _selected = data;
 }
 
 function setSelected(index) {
