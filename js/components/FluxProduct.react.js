@@ -14,24 +14,6 @@ var FluxProduct = React.createClass({
     FluxCartActions.updateCartVisible(true);
   },
 
-  // render: function() {
-  //   var stockAvailable = (this.props.selected.id in this.props.cartitems) ? this.props.selected.stock - this.props.cartitems[this.props.selected.id].quantity : this.props.selected.stock;
-  //   return (
-  //     <div className="flux-product">
-  //     // selected has replaced product
-  //       <img src={'img/' + this.props.selected.image}/>
-  //       <div className="flux-product-detail">
-  //         <h1 className="name">{this.props.selected.name}</h1>
-  //         <p className="description">{this.props.selected.description}</p>
-  //         <p className="price">Price: ${this.props.selected.price}</p>
-  //         <button type="button" onClick={this.addToCart} disabled={stockAvailable  > 0 ? '' : 'disabled'}>
-  //           {stockAvailable > 0 ? 'Add To Cart' : 'Sold Out'}
-  //         </button>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-
   render: function() {
     var self = this;
     var products = this.props.product;
