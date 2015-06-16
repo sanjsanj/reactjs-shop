@@ -29,25 +29,28 @@ var CartStore = _.extend({}, EventEmitter.prototype, {
     return Object.keys(_products).length;
   },
 
+  cartContainsFootwear: function(){
+    for(product in _products){
+      if(product < 6){return true;}
+    }
+    return false;
+  },
+
   getCartDiscount: function(){
     var discount = 0;
 
     var total = 0;
     for(product in _products){
+      console.log(product);
       if(_products.hasOwnProperty(product)){
         total += _products[product].price * _products[product].quantity;
       }
     }
 
-    if (total > 0){
-      if (total > 50){
-        discount += 15;
-      } else {
-        discount += 5;
-      }
-    } else {
-      true;
-    }
+    if (total > 75 && this.cartContainsFootwear()){discount += 15;}
+    if (total > 50){discount += 10;}
+    if (total > 0){discount += 5;}
+
     return discount.toFixed(2);
   },
 

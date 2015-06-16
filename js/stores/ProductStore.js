@@ -8,7 +8,6 @@ var _product = [], _selected = null;
 function loadProductData(data) {
   _product = data;
   _selected = data[0];
-  // _selected = data;
 }
 
 function setSelected(index) {
