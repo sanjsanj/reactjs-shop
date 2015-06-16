@@ -4,7 +4,6 @@ var FluxCartActions = require('../actions/FluxCartActions');
 var FluxProduct = React.createClass({
 
   addToCart: function(event){
-    // var id = this.props.selected.id;
     var id = this.props.selected.id;
     var update = {
       name: this.props.selected.name,
@@ -17,14 +16,13 @@ var FluxProduct = React.createClass({
 
   render: function() {
     var self = this;
-    var products = this.props.product;
-    console.log(products);
+    var products = self.props.product;
     var stockAvailable = (this.props.selected.id in this.props.cartitems) ? this.props.selected.stock - this.props.cartitems[this.props.selected.id].quantity : this.props.selected.stock;
     return (
       <ul>
-      {Object(products).map(function(product){
+      {products.map(function(product){
       return (
-        <li key={product}>
+        <li key={product.id}>
           <div className="flux-product">
             <img src={'img/' + product.image}/>
             <div className="flux-product-detail">
@@ -32,7 +30,7 @@ var FluxProduct = React.createClass({
               <p className="category">{product.category}</p>
               <p className="description">{product.description}</p>
               <p className="price">Price: ${product.price}</p>
-              <button type="button" onClick={self.addToCart.bind(self, product)} disabled={stockAvailable  > 0 ? '' : 'disabled'}>
+              <button type="button" onClick={self.addToCart.bind(null, product)} disabled={stockAvailable  > 0 ? '' : 'disabled'}>
                 {stockAvailable > 0 ? 'Add To Cart' : 'Sold Out'}
               </button>
             </div>
