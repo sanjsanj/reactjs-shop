@@ -4,6 +4,7 @@ var FluxCartConstants = require('../constants/FluxCartConstants');
 var _ = require('underscore');
 
 var _products = {}, _cartVisible = false;
+var self = this;
 
 function add(id, update){
   update.quantity = id in _products ? _products[id].quantity + 1 : 1;
@@ -28,9 +29,26 @@ var CartStore = _.extend({}, EventEmitter.prototype, {
     return Object.keys(_products).length;
   },
 
-  applyDiscount: function(){
+  getCartDiscount: function(){
     var discount = 0;
-    return discount;
+
+    var total = 0;
+    for(product in _products){
+      if(_products.hasOwnProperty(product)){
+        total += _products[product].price * _products[product].quantity;
+      }
+    }
+
+    if (total > 0){
+      if (total > 50){
+        discount += 15;
+      } else {
+        discount += 5;
+      }
+    } else {
+      true;
+    }
+    return discount.toFixed(2);
   },
 
   getCartTotal: function(){
@@ -40,7 +58,7 @@ var CartStore = _.extend({}, EventEmitter.prototype, {
         total += _products[product].price * _products[product].quantity;
       }
     }
-    total -= this.applyDiscount();
+    total -= this.getCartDiscount();
     return total.toFixed(2);
   },
 

@@ -11,7 +11,7 @@ function getCartState(){
     cartItems: CartStore.getCartItems(),
     cartCount: CartStore.getCartCount(),
     cartTotal: CartStore.getCartTotal(),
-    cartDiscount: CartStore.applyDiscount(),
+    cartDiscount: CartStore.getCartDiscount(),
     cartVisible: CartStore.getCartVisible()
   };
 }
@@ -35,7 +35,7 @@ var FluxCartApp = React.createClass({
   render: function(){
     return (
       <div className="flux-cart-app">
-        <FluxCart products={this.state.cartItems} count={this.state.cartCount} total={this.state.cartTotal} visible={this.state.cartVisible} />
+        <FluxCart products={this.state.cartItems} count={this.state.cartCount} total={this.state.cartTotal} discount={this.state.cartDiscount} visible={this.state.cartVisible} />
         <FluxProduct product={this.state.product} cartitems={this.state.cartItems} selected={this.state.selectedProduct} />
       </div>
     );
