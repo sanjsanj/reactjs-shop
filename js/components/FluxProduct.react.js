@@ -16,7 +16,7 @@ var FluxProduct = React.createClass({
 
   render: function() {
     var self = this;
-    var products = self.props.product;
+    var products = this.props.product;
     var stockAvailable = (this.props.selected.id in this.props.cartitems) ? this.props.selected.stock - this.props.cartitems[this.props.selected.id].quantity : this.props.selected.stock;
     return (
       <ul>
@@ -30,7 +30,7 @@ var FluxProduct = React.createClass({
                 <p className="category">{product.category}</p>
                 <p className="description">{product.description}</p>
                 <p className="price">Price: ${product.price}</p>
-                <button type="button" onClick={self.addToCart.bind(self, product)} disabled={stockAvailable  > 0 ? '' : 'disabled'}>
+                <button type="button" onClick={self.addToCart.bind(null, product)} disabled={stockAvailable  > 0 ? '' : 'disabled'}>
                   {stockAvailable > 0 ? 'Add To Cart' : 'Sold Out'}
                 </button>
               </div>

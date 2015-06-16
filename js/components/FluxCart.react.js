@@ -19,7 +19,6 @@ var FluxCart = React.createClass({
   render: function() {
     var self = this;
     var products = self.props.products;
-    console.log(products);
     return (
       <div className={"flux-cart " + (this.props.visible ? 'active' : '')}>
         <div className="mini-cart">
@@ -28,8 +27,8 @@ var FluxCart = React.createClass({
             {Object.keys(products).map(function(product){
               return (
                 <li key={product}>
-                  <h1 className="name">{products[product].name}</h1>
-                  <p className="category">{products[product].category} x {products[product].quantity}</p>
+                  <h1 className="name">{products[product].quantity} x {products[product].name}</h1>
+                  <p className="category">{products[product].category}</p>
                   <p className="price">${(products[product].price * products[product].quantity).toFixed(2)}</p>
                   <button type="button" className="remove-item" onClick={self.removeFromCart.bind(self, product)}>Remove</button>
                 </li>

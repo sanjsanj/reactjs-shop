@@ -28,6 +28,11 @@ var CartStore = _.extend({}, EventEmitter.prototype, {
     return Object.keys(_products).length;
   },
 
+  applyDiscount: function(){
+    var discount = 0;
+    return discount;
+  },
+
   getCartTotal: function(){
     var total = 0;
     for(product in _products){
@@ -35,6 +40,7 @@ var CartStore = _.extend({}, EventEmitter.prototype, {
         total += _products[product].price * _products[product].quantity;
       }
     }
+    total -= this.applyDiscount();
     return total.toFixed(2);
   },
 

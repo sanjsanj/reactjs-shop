@@ -11,6 +11,7 @@ function getCartState(){
     cartItems: CartStore.getCartItems(),
     cartCount: CartStore.getCartCount(),
     cartTotal: CartStore.getCartTotal(),
+    cartDiscount: CartStore.applyDiscount(),
     cartVisible: CartStore.getCartVisible()
   };
 }
