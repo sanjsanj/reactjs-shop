@@ -14,26 +14,49 @@ var FluxProduct = React.createClass({
     FluxCartActions.updateCartVisible(true);
   },
 
-  selectVariant: function(event){
-    FluxCartActions.selectProduct(event.target.value);
-  },
+  // render: function() {
+  //   var stockAvailable = (this.props.selected.id in this.props.cartitems) ? this.props.selected.stock - this.props.cartitems[this.props.selected.id].quantity : this.props.selected.stock;
+  //   return (
+  //     <div className="flux-product">
+  //     // selected has replaced product
+  //       <img src={'img/' + this.props.selected.image}/>
+  //       <div className="flux-product-detail">
+  //         <h1 className="name">{this.props.selected.name}</h1>
+  //         <p className="description">{this.props.selected.description}</p>
+  //         <p className="price">Price: ${this.props.selected.price}</p>
+  //         <button type="button" onClick={this.addToCart} disabled={stockAvailable  > 0 ? '' : 'disabled'}>
+  //           {stockAvailable > 0 ? 'Add To Cart' : 'Sold Out'}
+  //         </button>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   render: function() {
-    var ats = (this.props.selected.id in this.props.cartitems) ?
-      this.props.selected.stock - this.props.cartitems[this.props.selected.id].quantity :
-      this.props.selected.stock;
+    var self = this;
+    var products = this.props.product;
+    var stockAvailable = (this.props.selected.id in this.props.cartitems) ? this.props.selected.stock - this.props.cartitems[this.props.selected.id].quantity : this.props.selected.stock;
     return (
-      <div className="flux-product">
-        <img src={'img/' + this.props.product.image}/>
-        <div className="flux-product-detail">
-          <h1 className="name">{this.props.product.name}</h1>
-          <p className="description">{this.props.product.description}</p>
-          <p className="price">Price: ${this.props.selected.price}</p>
-          <button type="button" onClick={this.addToCart} disabled={ats  > 0 ? '' : 'disabled'}>
-            {ats > 0 ? 'Add To Cart' : 'Sold Out'}
-          </button>
-        </div>
-      </div>
+      <ul>
+      {Object.keys(products).map(function(product){
+      return (
+        <li key={product}>
+          <div className="flux-product">
+            <img src={'img/' + products[product].image}/>
+            <div className="flux-product-detail">
+              <h1 className="name">{products[product].name}</h1>
+              <p className="category">{products[product].category}</p>
+              <p className="description">{products[product].description}</p>
+              <p className="price">Price: ${products[product].price}</p>
+              <button type="button" onClick={self.addToCart} disabled={stockAvailable  > 0 ? '' : 'disabled'}>
+                {stockAvailable > 0 ? 'Add To Cart' : 'Sold Out'}
+              </button>
+            </div>
+          </div>
+        </li>
+        )
+        })}
+      </ul>
     );
   },
 

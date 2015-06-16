@@ -3,10 +3,13 @@ var EventEmitter = require('events').EventEmitter;
 var FluxCartConstants = require('../constants/FluxCartConstants');
 var _ = require('underscore');
 
-var _product = {}, _selected = null;
+var _product = [], _selected = null;
 
 function loadProductData(data) {
-  _product = data[0];
+  // console.log(data.length);
+  _product = data;
+  // console.log(_product);
+  // Array.prototype.push.apply(_product, data);
   _selected = data[0];
 }
 
