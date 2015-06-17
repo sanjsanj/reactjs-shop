@@ -6,19 +6,26 @@
   "dependencies": {
     "flux": "^2.0.0",
     "react": "^0.12.0",
-    "underscore": "^1.7.0"
+    "react-tools": "*",
+    "underscore": "^1.7.0",
+    "6to5-jest": "*",
+    "jest": "*"
   },
   "devDependencies": {
     "browserify": "~6.2.0",
     "envify": "~3.0.0",
-    "react": "^0.12.0",
+    "jest-cli": "^0.4.13",
     "reactify": "^0.15",
     "watchify": "~2.1.0"
   },
   "scripts": {
     "start": "watchify -o js/bundle.js -v -d .",
     "build": "browserify . | uglifyjs -cm > js/bundle.min.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/support/preprocessor.js",
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"]
   },
   "repository": {
     "type": "git",

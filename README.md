@@ -1,11 +1,20 @@
-# reactjs-shop
+#reactjs-shop
 
-To run:
+To run app:
 
 ```
-npm start
-open index.html
+$ npm install
+$ npm start
+$ open index.html
 ```
+
+To run tests:
+
+```
+$ npm install
+$ node_modules/karma/bin/karma start
+```
+
 Assumptions:
 
 - Client wants all instances of a particular product to be removed from the cart when the user chooses remove
@@ -17,3 +26,11 @@ Assumptions:
 Issues:
 
 [SO - adding the right items to the cart](http://stackoverflow.com/questions/30865389/cart-not-adding-correct-item-in-react-js)
+
+[Jest does not work with node 0.12](https://github.com/facebook/jest/issues/243)
+
+Todo:
+
+- Products other than the first one can not be added to cart when out of stock
+
+- Change footwear test in discounts to look for string matcher

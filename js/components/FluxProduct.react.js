@@ -29,7 +29,7 @@ var FluxProduct = React.createClass({
                 <h1 className="name">{product.name}</h1>
                 <p className="category">{product.category}</p>
                 <p className="description">{product.description}</p>
-                <p className="price">Price: ${product.price}</p>
+                <p className="price">Price: £{product.price}</p>
                 <button type="button" onClick={self.addToCart.bind(null, product)} disabled={stockAvailable  > 0 ? '' : 'disabled'}>
                   {stockAvailable > 0 ? 'Add To Cart' : 'Sold Out'}
                 </button>

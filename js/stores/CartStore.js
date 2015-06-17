@@ -38,8 +38,8 @@ var CartStore = _.extend({}, EventEmitter.prototype, {
 
   getCartDiscount: function(){
     var discount = 0;
-
     var total = 0;
+
     for(product in _products){
       console.log(product);
       if(_products.hasOwnProperty(product)){
@@ -50,7 +50,6 @@ var CartStore = _.extend({}, EventEmitter.prototype, {
     if (total > 75 && this.cartContainsFootwear()){discount += 15;}
     if (total > 50){discount += 10;}
     if (total > 0){discount += 5;}
-
     return discount.toFixed(2);
   },
 
