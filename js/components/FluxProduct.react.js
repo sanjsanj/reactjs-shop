@@ -19,7 +19,7 @@ var FluxProduct = React.createClass({
     var products = this.props.product;
     var stockAvailable = (this.props.selected.id in this.props.cartitems) ? this.props.selected.stock - this.props.cartitems[this.props.selected.id].quantity : this.props.selected.stock;
     return (
-      <ul>
+      <ul className="all-products">
         {products.map(function(product){
         return (
           <li key={product.id}>
